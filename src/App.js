@@ -7,6 +7,12 @@ import Shuffle from './components/Shuffle.js'
 import './App.css';
 
 
+function refreshPage() {
+
+  window.location.reload(false);
+
+}
+
 function App() {
 
   const tops = [pullover, hoodie],
@@ -28,14 +34,13 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-
-      {/* <button onClick={document.getElementsByTagName('img')[0].src=Shuffle(tops_imgs, 1)}>
-        Activate Lasers
-      </button> */}
       {/* Grab one top and one bottom from all possible tops and bottoms */}
-      {/* This simply outputs the <img> tags, which is why onClick is not working */}
       {Shuffle(tops_imgs, 1)}
       {Shuffle(bottoms_imgs, 1)}
+      <br />
+      <button onClick={refreshPage} style={btnStyle}>
+        Dress Me
+      </button>
       </header>
     </div>
   );
