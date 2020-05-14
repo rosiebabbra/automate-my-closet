@@ -46,4 +46,9 @@ function App() {
   );
 }
 
+const btnStyle = {
+  backgroundColor: 'white',
+  fontSize: '24px'
+}
+
 export default App;
